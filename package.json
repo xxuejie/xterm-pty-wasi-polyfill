@@ -1,0 +1,25 @@
+{
+  "name": "xterm-pty-wasi-polyfill",
+  "version": "0.1.0",
+  "description": "WASI polyfills for connecting WASI apps with xterm-pty",
+  "main": "dist/index.js",
+  "scripts": {
+    "fmt": "prettier -w src/*.js",
+    "build": "rollup src/index.js --file dist/index.js --format umd --name 'xterm-pty-wasi-polyfill'",
+    "update_constants": "rm -f abi.wasm && ${WASI_SDK_PATH}/bin/clang --sysroot=${WASI_SDK_PATH}/share/wasi-sysroot -o abi.wasm abi.c && wasmtime abi.wasm > src/constants.js && prettier -w src/constants.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxuejie/xterm-pty-wasi-polyfill.git"
+  },
+  "author": "Xuejie Xiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxuejie/xterm-pty-wasi-polyfill/issues"
+  },
+  "homepage": "https://github.com/xxuejie/xterm-pty-wasi-polyfill#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1",
+    "rollup": "^2.77.2"
+  }
+}

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "make && cp linenoise_example.wasm www/",
-    "start": "node serve.js"
+    "start": "node serve.js",
+    "dist": "esbuild index.js worker.js --bundle --outdir=www"
   },
   "private": true,
   "author": "Xuejie Xiao",

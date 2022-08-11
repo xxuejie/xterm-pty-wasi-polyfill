@@ -1,1 +1,3 @@
 *.wasm
+www/index.js
+www/worker.js

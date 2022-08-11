@@ -13,3 +13,5 @@ $ npm run start
 ```
 
 A server should now be setup at `http://127.0.0.1:3000`, where you can use your browser to play with the demo.
+
+Or you can see the deployed site at <https://xterm-pty-wasi-demo.netlify.app/>.

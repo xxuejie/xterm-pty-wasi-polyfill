@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "WASI polyfills for connecting WASI apps with xterm-pty",
   "main": "dist/index.js",
+  "files": [
+    "abi.c",
+    "termios.h"
+  ],
   "scripts": {
     "fmt": "prettier -w src/*.js",
     "build": "rollup src/index.js --file dist/index.js --format umd --name 'xterm-pty-wasi-polyfill'",

@@ -1,0 +1,19 @@
+{
+  "name": "xterm-pty-wasi-demo",
+  "version": "0.1.0",
+  "description": "This is a demo showcasing xterm-pty powering a WASI app.",
+  "main": "index.js",
+  "scripts": {
+    "build": "make && cp linenoise_example.wasm www/",
+    "start": "node serve.js"
+  },
+  "private": true,
+  "author": "Xuejie Xiao",
+  "license": "MIT",
+  "dependencies": {
+    "xterm-pty-wasi-polyfill": "file:.."
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.1"
+  }
+}

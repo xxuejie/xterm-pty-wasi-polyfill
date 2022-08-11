@@ -9,7 +9,7 @@ How to use it:
 ```
 $ npm i
 $ npm run build
-$ node serve.js
+$ npm run start
 ```
 
 A server should now be setup at `http://127.0.0.1:3000`, where you can use your browser to play with the demo.

@@ -10,7 +10,8 @@
   "scripts": {
     "fmt": "prettier -w src/*.js",
     "build": "rollup src/index.js --file dist/index.js --format umd --name 'xterm-pty-wasi-polyfill'",
-    "update_constants": "rm -f abi.wasm && ${WASI_SDK_PATH}/bin/clang --sysroot=${WASI_SDK_PATH}/share/wasi-sysroot -o abi.wasm abi.c && wasmtime abi.wasm > src/constants.js && prettier -w src/constants.js"
+    "update_constants": "rm -f abi.wasm && ${WASI_SDK_PATH}/bin/clang --sysroot=${WASI_SDK_PATH}/share/wasi-sysroot -o abi.wasm abi.c && wasmtime abi.wasm > src/constants.js && prettier -w src/constants.js",
+    "prepublishOnly": "npm run update_constants && npm run build"
   },
   "repository": {
     "type": "git",

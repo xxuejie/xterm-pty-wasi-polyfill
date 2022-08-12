@@ -1,6 +1,6 @@
 {
   "name": "xterm-pty-wasi-polyfill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "WASI polyfills for connecting WASI apps with xterm-pty",
   "main": "dist/index.js",
   "files": [
